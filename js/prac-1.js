@@ -1,9 +1,9 @@
 /* Створіть змінну str і дайте їй значення 'abcde'. Звертаючись до окремих символів цього рядка,виведіть на екран символ 'a', символ 'b', символ 'e'.
  */
-const srt = 'abcde'
-console.log(srt[0])
-console.log(srt[1])
-console.log(srt[srt.length - 1])
+// const srt = 'abcde'
+// console.log(srt[0])
+// console.log(srt[1])
+// console.log(srt[srt.length - 1])
 
 /* // Виведи на екран загальну кількість яблук та винограду.Різницю яблук та винограду. */
 // const apples = 47
