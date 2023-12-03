@@ -150,19 +150,19 @@
 
 // console.log(user.getInfo())
 
-function stringChange(input) {
-	let result = ''
-	let letter = ['а', 'е', 'є', 'и', 'і', 'ї', 'о', 'у', 'ю', 'я']
+// function stringChange(input) {
+// 	let result = ''
+// 	let letter = ['а', 'е', 'є', 'и', 'і', 'ї', 'о', 'у', 'ю', 'я']
 
-	for (let i = 0; i < input.length; i++) {
-		if (letter.includes(input[i].toLowerCase())) {
-			result = result + input[i].toUpperCase()
-		} else {
-			result = result + input[i].toLowerCase()
-		}
-	}
-	return result
-}
+// 	for (let i = 0; i < input.length; i++) {
+// 		if (letter.includes(input[i].toLowerCase())) {
+// 			result = result + input[i].toUpperCase()
+// 		} else {
+// 			result = result + input[i].toLowerCase()
+// 		}
+// 	}
+// 	return result
+// }
 
-console.log(stringChange('Привіт друзі'))
-console.log(stringChange('А ми тут граємо'))
+// console.log(stringChange('Привіт друзі'))
+// console.log(stringChange('А ми тут граємо'))
