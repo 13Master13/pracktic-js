@@ -87,13 +87,35 @@ const newArr = Array.from(arr)// Створення нового масиву ne
 for (let i = 0; i < array.length; i++) {}// FOR Ітерація по масиву array з використанням циклу for
 for (const element of elements) { }// FOR OF Ітерація по масиву elements із збереженням кожного елемента у elements
 
-for (const key in object) {}// FOR IN Перебір ключів key об'єкта object
+for (const key in object) { }// FOR IN Перебір ключів key об'єкта object
+
+array.forEach(function callback(element, index, array) {
+  // Тіло колбек-функції
+});// Метод перебирання масиву array
 
 function name(params) { }// function declaration
 const newFun = function name(params) { }// function expression
+
+const arrowAdd = (a, b, c) => {
+  return a + b + c;
+};// Стрілочна функція arrowAdd з параметрами a, b, c
 
 const book = {
 	key: value,
 }
 const keys = Object.keys(book)// Приймає об'єкт book та повертає масив keys ключів
 const values = Object.values(book)// Приймає об'єкт book та повертаю масив values значень
+
+const names = students.map(student => student.name);// Створює новий масив names з іменами їх імен student.name
+const flattenedCourses = students.flatMap(student => student.courses);// Створює новий (плоский) масив flattenedCourses з курсами, які відвідує кожен студент student.courses
+const positiveValues = values.filter(value => value >= 0);// Додає у новий масив positiveValues елементи, які задовільняєт притеріям пошуку value >= 0
+colorPickerOptions.find((option) => option.label === "blue");// Повертає елемент з масиву colorPickerOptions, який задовільняє критеріям пошуку option.label === "blue"
+const hasEveryProduct = products.every(product => product.quantity > 0);// Перевіряє, чи усі елементи product.quantity масиву products задовільняют умові product.quantity > 0 Повертає true або false
+const hasEveryProduct = products.some(product => product.quantity > 0);// Перевіряє, чи хоча б один елемент product.quantity масиву products задовільняє умові product.quantity > 0 Повертає true або false
+const new = array.reduce((callback) => {
+  // Тіло callback-функції
+}, initialValue);// Послідовно переберає масив array. Виконує дію, яка описана у callback-функції.Значення акумулятора initialValue
+const ascendingScores = scores.toSorted();// Сортує масив scores
+const ascendingScores = scores.toSorted((a, b) => a - b);// Сортування за зростанням
+const descendingScores = scores.toSorted((a, b) => b - a);// Сортування за спаданням
+firstString.localeCompare(secondString)// Викликається на рядку, який потрібно порівняти (firstString) з тим, що був переданий йому як аргумент (secondString). Повертає -1, якщо firstString перед secondString. Повертає 1, якщо firstString після secondString. Повертає 0, якщо рядки однакові
