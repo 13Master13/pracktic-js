@@ -356,49 +356,49 @@
 
 // HW-5-3
 
-const sortByDescendingFriendCount = users => {
-	scores.toSorted((a, b) => b - a)
-}
+// const sortByDescendingFriendCount = users => {
+// 	scores.toSorted((a, b) => b - a)
+// }
 
-console.log(
-	sortByDescendingFriendCount([
-		{
-			name: 'Moore Hensley',
-			friends: ['Sharron Pace'],
-			gender: 'male',
-		},
-		{
-			name: 'Sharlene Bush',
-			friends: ['Briana Decker', 'Sharron Pace'],
-			gender: 'female',
-		},
-		{
-			name: 'Ross Vazquez',
-			friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
-			gender: 'male',
-		},
-		{
-			name: 'Elma Head',
-			friends: ['Goldie Gentry', 'Aisha Tran'],
-			gender: 'female',
-		},
-		{
-			name: 'Carey Barr',
-			friends: ['Jordan Sampson', 'Eddie Strong'],
-			gender: 'male',
-		},
-		{
-			name: 'Blackburn Dotson',
-			friends: ['Jacklyn Lucas', 'Linda Chapman'],
-			gender: 'male',
-		},
-		{
-			name: 'Sheree Anthony',
-			friends: ['Goldie Gentry', 'Briana Decker'],
-			gender: 'female',
-		},
-	])
-)
+// console.log(
+// 	sortByDescendingFriendCount([
+// 		{
+// 			name: 'Moore Hensley',
+// 			friends: ['Sharron Pace'],
+// 			gender: 'male',
+// 		},
+// 		{
+// 			name: 'Sharlene Bush',
+// 			friends: ['Briana Decker', 'Sharron Pace'],
+// 			gender: 'female',
+// 		},
+// 		{
+// 			name: 'Ross Vazquez',
+// 			friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+// 			gender: 'male',
+// 		},
+// 		{
+// 			name: 'Elma Head',
+// 			friends: ['Goldie Gentry', 'Aisha Tran'],
+// 			gender: 'female',
+// 		},
+// 		{
+// 			name: 'Carey Barr',
+// 			friends: ['Jordan Sampson', 'Eddie Strong'],
+// 			gender: 'male',
+// 		},
+// 		{
+// 			name: 'Blackburn Dotson',
+// 			friends: ['Jacklyn Lucas', 'Linda Chapman'],
+// 			gender: 'male',
+// 		},
+// 		{
+// 			name: 'Sheree Anthony',
+// 			friends: ['Goldie Gentry', 'Briana Decker'],
+// 			gender: 'female',
+// 		},
+// 	])
+// )
 // [
 //   {
 //     name: "Ross Vazquez",
@@ -436,3 +436,43 @@ console.log(
 //     gender: "male"
 //   }
 // ]
+
+const contacts = [
+	{
+		firstName: 'Akira',
+		lastName: 'Laine',
+		number: '0543236543',
+		likes: ['Pizza', 'Coding', 'Brownie Points'],
+	},
+	{
+		firstName: 'Harry',
+		lastName: 'Potter',
+		number: '0994372684',
+		likes: ['Hogwarts', 'Magic', 'Hagrid'],
+	},
+	{
+		firstName: 'Sherlock',
+		lastName: 'Holmes',
+		number: '0487345643',
+		likes: ['Intriguing Cases', 'Violin'],
+	},
+	{
+		firstName: 'Kristian',
+		lastName: 'Vos',
+		number: 'unknown',
+		likes: ['JavaScript', 'Gaming', 'Foxes'],
+	},
+]
+
+function lookUpProfile(name, prop) {
+	for (let i = 0; i < contacts.length; i++) {
+		if (contacts[i].firstName === name) {
+			if (contacts[i].hasOwnProperty(prop)) {
+				return contacts[i][prop]
+			} else {
+				return 'No such property'
+			}
+		}
+	}
+	return 'No such contact'
+}
